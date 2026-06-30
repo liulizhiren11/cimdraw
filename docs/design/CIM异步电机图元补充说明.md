@@ -3,7 +3,7 @@
 
 ## 1. 背景
 
-`AsynchronousMachine` 在 CIM 语义上属于旋转电机设备，但在 `lz-power` 早期补齐阶段，仓库内并没有专用的电动机图元。
+`AsynchronousMachine` 在 CIM 语义上属于旋转电机设备，但在 `cimdraw` 早期补齐阶段，仓库内并没有专用的电动机图元。
 
 为了先保证导入链路可用，早期实现采用了一个阶段性策略：
 

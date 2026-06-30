@@ -40,17 +40,17 @@ FrameActionBuilder::FileActionsResult FrameActionBuilder::installFileActions(QMa
     QToolBar* fileBar = host->addToolBar(QObject::tr("File"));
 
     QAction* fileNewAction = createAction(host,
-        QObject::tr("新建电力工程"),
+        QObject::tr("新建 CIMDraw"),
         QStringLiteral(":/image/file_new.png"),
         QKeySequence(QObject::tr("Ctrl+N")),
-        QObject::tr("新建电力工程"));
+        QObject::tr("新建 CIMDraw"));
     QObject::connect(fileNewAction, &QAction::triggered, frame, &LzFrame::newPowerScene);
 
     QAction* fileNewPowerAction = createAction(host,
-        QObject::tr("新建电力工程"),
+        QObject::tr("新建 CIMDraw"),
         QString(),
         QKeySequence(),
-        QObject::tr("新建电力工程"));
+        QObject::tr("新建 CIMDraw"));
     QObject::connect(fileNewPowerAction, &QAction::triggered, frame, &LzFrame::newPowerScene);
 
     QAction* fileOpenAction = createAction(host,

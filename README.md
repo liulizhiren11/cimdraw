@@ -1,6 +1,6 @@
-# lz-power
+# cimdraw
 
-`lz-power` 是一个基于 Qt6 / C++17 的电力一次接线图绘制与分析工程，当前窗口标题为 `电力工程`。
+`cimdraw` 是一个基于 Qt6 / C++17 的电力一次接线图绘制与分析工程，当前窗口标题为 `CIMDraw`。
 
 仓库当前只保留电力工程相关内容，历史上无关的子目录和占位功能已经移除。
 
@@ -42,14 +42,14 @@
 
 ```powershell
 cmake -S . -B out/build/debug -G Ninja -DCMAKE_BUILD_TYPE=Debug -DCMAKE_PREFIX_PATH=C:/Qt/Qt6.5.3/6.5.3/msvc2019_64
-cmake --build out/build/debug --target lz_power
+cmake --build out/build/debug --target cimdraw
 ```
 
 也可以使用预设：
 
 ```powershell
 cmake --preset Qt-Debug
-cmake --build out/build/debug --target lz_power
+cmake --build out/build/debug --target cimdraw
 ```
 
 ## 运行
@@ -57,7 +57,7 @@ cmake --build out/build/debug --target lz_power
 构建产物默认输出到上级 `exe` 目录，例如：
 
 ```powershell
-..\exe\bin64\lz_power.exe
+..\exe\bin64\cimdraw.exe
 ```
 
 如需启用运行态数据源，可参考：
@@ -71,9 +71,9 @@ config/lz_data.example.json
 默认不构建测试。启用方式：
 
 ```powershell
-cmake -S . -B out/build/debug-tests -G Ninja -DCMAKE_BUILD_TYPE=Debug -DCMAKE_PREFIX_PATH=C:/Qt/Qt6.5.3/6.5.3/msvc2019_64 -DBUILD_LZ_TESTS=ON
-cmake --build out/build/debug-tests --target lz_topology_tests
-.\out\build\debug-tests\tests_bin\lz_topology_tests.exe
+cmake -S . -B out/build/debug-tests -G Ninja -DCMAKE_BUILD_TYPE=Debug -DCMAKE_PREFIX_PATH=C:/Qt/Qt6.5.3/6.5.3/msvc2019_64 -DBUILD_CIMDRAW_TESTS=ON
+cmake --build out/build/debug-tests --target cimdraw_topology_tests
+.\out\build\debug-tests\tests_bin\cimdraw_topology_tests.exe
 ```
 
 ## 文档入口

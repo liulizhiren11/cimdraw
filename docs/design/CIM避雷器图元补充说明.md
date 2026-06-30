@@ -2,7 +2,7 @@
 
 ## 背景
 
-`SurgeArrester` 在 CIM 语义里对应避雷器。`lz-power` 仓库里原本已经有可直接复用的避雷器图元 `LzPowerArresterItem`，也有对应工具和拓扑角色，但早期 CIM 补齐阶段没有把这条映射接通。
+`SurgeArrester` 在 CIM 语义里对应避雷器。`cimdraw` 仓库里原本已经有可直接复用的避雷器图元 `LzPowerArresterItem`，也有对应工具和拓扑角色，但早期 CIM 补齐阶段没有把这条映射接通。
 
 这类缺口和 `AsynchronousMachine` 不一样：
 

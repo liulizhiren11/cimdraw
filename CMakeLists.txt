@@ -1,6 +1,6 @@
 ﻿cmake_minimum_required(VERSION 3.16)
 
-project(lz_power LANGUAGES CXX)
+project(cimdraw LANGUAGES CXX)
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
@@ -36,11 +36,11 @@ endif()
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${EXEC_DIR})
 
 # 设置 MOC、UI、RCC 输出目录（与 .pro 一致）
-set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/../build/lz-power/lib)
-set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/../build/lz-power/lib)
-set(CMAKE_AUTOMOC_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/../build/lz-power/moc)
-set(CMAKE_AUTOUIC_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/../build/lz-power/ui)
-set(CMAKE_AUTORCC_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/../build/lz-power/rcc)
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/../build/cimdraw/lib)
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/../build/cimdraw/lib)
+set(CMAKE_AUTOMOC_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/../build/cimdraw/moc)
+set(CMAKE_AUTOUIC_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/../build/cimdraw/ui)
+set(CMAKE_AUTORCC_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/../build/cimdraw/rcc)
 
 # 设置 include 路径
 include_directories(${CMAKE_SOURCE_DIR}/src)
@@ -98,10 +98,10 @@ set(ALL_SRC_FILES ${PROJECT_SRC_FILES} ${QTPROPERTY_SOURCES})
 file(GLOB UI_FILES *.ui)
 
 # 添加资源
-set(RESOURCE_FILES lzdraw.qrc)
+set(RESOURCE_FILES cimdraw.qrc)
 
 # 最终构建目标
-add_executable(lz_power WIN32  # WIN32 指定 GUI 应用
+add_executable(cimdraw WIN32  # WIN32 指定 GUI 应用
     ${ALL_SRC_FILES}
     ${HEADER_FILES}
     ${UI_FILES}
@@ -109,7 +109,7 @@ add_executable(lz_power WIN32  # WIN32 指定 GUI 应用
 )
 
 # 链接 Qt 模块
-target_link_libraries(lz_power PRIVATE
+target_link_libraries(cimdraw PRIVATE
     Qt6::Core
     Qt6::Gui
     Qt6::Widgets
@@ -121,16 +121,16 @@ target_link_libraries(lz_power PRIVATE
 
 # 如果 Qt6::Core5Compat 可用，则添加
 if(Qt6Core5Compat_FOUND)
-    target_link_libraries(lz_power PRIVATE Qt6::Core5Compat)
+    target_link_libraries(cimdraw PRIVATE Qt6::Core5Compat)
 endif()
 
 # 设置 Windows 平台特定选项
 if(WIN32)
-    target_compile_definitions(lz_power PRIVATE WIN32_LEAN_AND_MEAN)
+    target_compile_definitions(cimdraw PRIVATE WIN32_LEAN_AND_MEAN)
     if(MSVC)
-        target_link_options(lz_power PRIVATE /DEBUG)
+        target_link_options(cimdraw PRIVATE /DEBUG)
     elseif(MINGW)
-        target_link_options(lz_power PRIVATE "-g")
+        target_link_options(cimdraw PRIVATE "-g")
     endif()
 endif()
 
@@ -144,12 +144,12 @@ set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -g")
 set(CMAKE_PREFIX_PATH "C:/Qt/Qt6.5.3/6.5.3/msvc2019_64")
 set(QT6_DIR "C:/Qt/Qt6.5.3/6.5.3/Src")
 
-option(BUILD_LZ_TESTS "Build QTest executable lz_topology_tests" OFF)
-if(BUILD_LZ_TESTS)
+option(BUILD_CIMDRAW_TESTS "Build QTest executable cimdraw_topology_tests" OFF)
+if(BUILD_CIMDRAW_TESTS)
     find_package(Qt6 REQUIRED COMPONENTS Test)
     set(LZ_TEST_SOURCES ${ALL_SRC_FILES})
     list(FILTER LZ_TEST_SOURCES EXCLUDE REGEX ".*/src/main_power\\.cpp$")
-    add_executable(lz_topology_tests
+    add_executable(cimdraw_topology_tests
         tests/test_power_topology_main.cpp
         tests/test_power_topology.cpp
         tests/test_cim_model.cpp
@@ -160,8 +160,8 @@ if(BUILD_LZ_TESTS)
         ${UI_FILES}
         ${RESOURCE_FILES}
     )
-    set_target_properties(lz_topology_tests PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/tests_bin")
-    target_link_libraries(lz_topology_tests PRIVATE
+    set_target_properties(cimdraw_topology_tests PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/tests_bin")
+    target_link_libraries(cimdraw_topology_tests PRIVATE
         Qt6::Core
         Qt6::Gui
         Qt6::Widgets
@@ -172,16 +172,16 @@ if(BUILD_LZ_TESTS)
         Qt6::Test
     )
     if(Qt6Core5Compat_FOUND)
-        target_link_libraries(lz_topology_tests PRIVATE Qt6::Core5Compat)
+        target_link_libraries(cimdraw_topology_tests PRIVATE Qt6::Core5Compat)
     endif()
     if(WIN32)
-        target_compile_definitions(lz_topology_tests PRIVATE WIN32_LEAN_AND_MEAN)
+        target_compile_definitions(cimdraw_topology_tests PRIVATE WIN32_LEAN_AND_MEAN)
         if(MSVC)
         elseif(MINGW)
         endif()
     endif()
 
-    add_executable(lz_cim_importer_tests
+    add_executable(cimdraw_cim_importer_tests
         tests/test_cim_importer_main.cpp
         tests/test_cim_importer.cpp
         ${LZ_TEST_SOURCES}
@@ -189,8 +189,8 @@ if(BUILD_LZ_TESTS)
         ${UI_FILES}
         ${RESOURCE_FILES}
     )
-    set_target_properties(lz_cim_importer_tests PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/tests_bin")
-    target_link_libraries(lz_cim_importer_tests PRIVATE
+    set_target_properties(cimdraw_cim_importer_tests PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/tests_bin")
+    target_link_libraries(cimdraw_cim_importer_tests PRIVATE
         Qt6::Core
         Qt6::Gui
         Qt6::Widgets
@@ -201,16 +201,16 @@ if(BUILD_LZ_TESTS)
         Qt6::Test
     )
     if(Qt6Core5Compat_FOUND)
-        target_link_libraries(lz_cim_importer_tests PRIVATE Qt6::Core5Compat)
+        target_link_libraries(cimdraw_cim_importer_tests PRIVATE Qt6::Core5Compat)
     endif()
     if(WIN32)
-        target_compile_definitions(lz_cim_importer_tests PRIVATE WIN32_LEAN_AND_MEAN)
+        target_compile_definitions(cimdraw_cim_importer_tests PRIVATE WIN32_LEAN_AND_MEAN)
         if(MSVC)
         elseif(MINGW)
         endif()
     endif()
 
-    add_executable(lz_cim_graphics_tests
+    add_executable(cimdraw_cim_graphics_tests
         tests/test_cim_graphics_main.cpp
         tests/test_cim_graphics.cpp
         ${LZ_TEST_SOURCES}
@@ -218,8 +218,8 @@ if(BUILD_LZ_TESTS)
         ${UI_FILES}
         ${RESOURCE_FILES}
     )
-    set_target_properties(lz_cim_graphics_tests PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/tests_bin")
-    target_link_libraries(lz_cim_graphics_tests PRIVATE
+    set_target_properties(cimdraw_cim_graphics_tests PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/tests_bin")
+    target_link_libraries(cimdraw_cim_graphics_tests PRIVATE
         Qt6::Core
         Qt6::Gui
         Qt6::Widgets
@@ -230,16 +230,16 @@ if(BUILD_LZ_TESTS)
         Qt6::Test
     )
     if(Qt6Core5Compat_FOUND)
-        target_link_libraries(lz_cim_graphics_tests PRIVATE Qt6::Core5Compat)
+        target_link_libraries(cimdraw_cim_graphics_tests PRIVATE Qt6::Core5Compat)
     endif()
     if(WIN32)
-        target_compile_definitions(lz_cim_graphics_tests PRIVATE WIN32_LEAN_AND_MEAN)
+        target_compile_definitions(cimdraw_cim_graphics_tests PRIVATE WIN32_LEAN_AND_MEAN)
         if(MSVC)
         elseif(MINGW)
         endif()
     endif()
 
-    add_executable(lz_cim_ui_tests
+    add_executable(cimdraw_cim_ui_tests
         tests/test_cim_ui_main.cpp
         tests/test_cim_ui.cpp
         ${LZ_TEST_SOURCES}
@@ -247,8 +247,8 @@ if(BUILD_LZ_TESTS)
         ${UI_FILES}
         ${RESOURCE_FILES}
     )
-    set_target_properties(lz_cim_ui_tests PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/tests_bin")
-    target_link_libraries(lz_cim_ui_tests PRIVATE
+    set_target_properties(cimdraw_cim_ui_tests PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/tests_bin")
+    target_link_libraries(cimdraw_cim_ui_tests PRIVATE
         Qt6::Core
         Qt6::Gui
         Qt6::Widgets
@@ -259,10 +259,10 @@ if(BUILD_LZ_TESTS)
         Qt6::Test
     )
     if(Qt6Core5Compat_FOUND)
-        target_link_libraries(lz_cim_ui_tests PRIVATE Qt6::Core5Compat)
+        target_link_libraries(cimdraw_cim_ui_tests PRIVATE Qt6::Core5Compat)
     endif()
     if(WIN32)
-        target_compile_definitions(lz_cim_ui_tests PRIVATE WIN32_LEAN_AND_MEAN)
+        target_compile_definitions(cimdraw_cim_ui_tests PRIVATE WIN32_LEAN_AND_MEAN)
         if(MSVC)
         elseif(MINGW)
         endif()

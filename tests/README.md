@@ -1,6 +1,6 @@
-# lz-power tests
+# cimdraw tests
 
-`tests/` 只保留当前 `lz-power` 工程自己的回归测试。
+`tests/` 只保留当前 `cimdraw` 工程自己的回归测试。
 
 ## Files
 

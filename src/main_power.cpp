@@ -7,8 +7,8 @@ int main(int argc, char *argv[])
     QApplication::setAttribute(Qt::AA_UseHighDpiPixmaps);
 
     QApplication app(argc, argv);
-    app.setApplicationName(QString::fromUtf8("lz-power"));
-    app.setApplicationDisplayName(QString::fromUtf8("电力工程"));
+    app.setApplicationName(QString::fromUtf8("cimdraw"));
+    app.setApplicationDisplayName(QString::fromUtf8("CIMDraw"));
     QString filename;
     for (int i = 1; i < argc; ++i)
     {

@@ -24,7 +24,7 @@ LzView* FrameDocumentController::createPowerScene(const NewSceneContext& context
     if (context.afterCreate)
         context.afterCreate(view, scene);
     if (context.renameCurrentTab)
-        context.renameCurrentTab(QObject::tr("未命名电力工程"));
+        context.renameCurrentTab(QObject::tr("未命名 CIMDraw"));
     return view;
 }
 

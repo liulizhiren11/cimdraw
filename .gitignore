@@ -1,3 +1,8 @@
+# Public export exclusions for cimdraw
+.git/
+.agents/
+.codex/
+%TEMP%/
 build/
 build-tests/
 out/
@@ -7,16 +12,13 @@ tools/
 .vs/
 .idea/
 cmake-build-*/
-*.user
-*.log
-*.pdb
-*.obj
-*.o
-*.ilk
-*.idb
-*.ipch
-*.pch
-*.suo
-CMakeUserPresets.json
 tests/__pycache__/
-%TEMP%/
+*.pyc
+*.obj
+*.pdb
+*.ilk
+*.log
+*.user
+
+CMakeLists.txt.user
+CMakeUserPresets.json

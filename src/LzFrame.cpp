@@ -105,7 +105,7 @@ LzFrame::LzFrame(QString filePath,QWidget* parent)
     connect(tabWiget, SIGNAL(currentChanged(int)), this, SLOT(onTabWidgetChanged(int)));
     connect(d_ptr->centralWidget, &LzCenterWidget::requestNewScene, this, &LzFrame::newPowerScene);
     connect(d_ptr->centralWidget, &LzCenterWidget::currentTabClosed, this, &LzFrame::onCloseTab);
-    setWindowTitle(QString::fromUtf8("电力工程"));
+    setWindowTitle(QString::fromUtf8("CIMDraw"));
     this->setMinimumSize(1280, 800);
     initFrameTools();
     FrameWorkbenchStyler workbenchStyler;
@@ -383,7 +383,7 @@ void LzFrame::generateTopologyGraphForMode(int modeValue)
 
 void LzFrame::about()
 {
-    QMessageBox::about(this, "lzDraw", tr("lzDraw V1.0.0\nCopyright ©2011-%1 Inc. All Rights Reserved.")
+    QMessageBox::about(this, "CIMDraw", tr("CIMDraw V1.0.0\nCopyright ©2011-%1 Inc. All Rights Reserved.")
                        .arg(QDateTime::currentDateTime().date().year()));
 }
 
