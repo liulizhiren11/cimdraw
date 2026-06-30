@@ -1,0 +1,2724 @@
+{
+  "source": {
+    "name": "merged",
+    "cgmes_version": "cgmes_v2_4_15",
+    "source_mode": "local-cache",
+    "merged_sources": [
+      {
+        "name": "cimpy",
+        "owner": "sogno-platform",
+        "repo": "cimpy",
+        "ref": "master",
+        "package_path": "cimpy/cgmes_v2_4_15",
+        "github_url": "https://github.com/sogno-platform/cimpy",
+        "api_url": "https://api.github.com/repos/sogno-platform/cimpy/contents/cimpy/cgmes_v2_4_15?ref=master",
+        "local_cache_dir": "C:/Users/20621/AppData/Local/Temp/cim-upstream-scout/cimpy/cimpy/cgmes_v2_4_15"
+      },
+      {
+        "name": "gridcal",
+        "owner": "SanPen",
+        "repo": "GridCal",
+        "ref": "master",
+        "package_path": "src/VeraGridEngine/IO/cim/cgmes/cgmes_v2_4_15/devices",
+        "github_url": "https://github.com/SanPen/GridCal",
+        "api_url": "https://api.github.com/repos/SanPen/GridCal/contents/src/VeraGridEngine/IO/cim/cgmes/cgmes_v2_4_15/devices?ref=master",
+        "local_cache_dir": "C:/Users/20621/AppData/Local/Temp/cim-upstream-scout/GridCal/src/VeraGridEngine/IO/cim/cgmes/cgmes_v2_4_15/devices"
+      }
+    ]
+  },
+  "class_count": 373,
+  "parents": {
+    "ACDCConverter": "ConductingEquipment",
+    "ACDCConverterDCTerminal": "DCBaseTerminal",
+    "ACDCTerminal": "IdentifiedObject",
+    "ACLineSegment": "Conductor",
+    "Accumulator": "Measurement",
+    "AccumulatorLimit": "Limit",
+    "AccumulatorLimitSet": "LimitSet",
+    "AccumulatorReset": "Control",
+    "AccumulatorValue": "MeasurementValue",
+    "ActivePowerLimit": "OperationalLimit",
+    "Analog": "Measurement",
+    "AnalogControl": "Control",
+    "AnalogLimit": "Limit",
+    "AnalogLimitSet": "LimitSet",
+    "AnalogValue": "MeasurementValue",
+    "ApparentPowerLimit": "OperationalLimit",
+    "AsynchronousMachine": "RotatingMachine",
+    "AsynchronousMachineDynamics": "RotatingMachineDynamics",
+    "AsynchronousMachineEquivalentCircuit": "AsynchronousMachineDynamics",
+    "AsynchronousMachineTimeConstantReactance": "AsynchronousMachineDynamics",
+    "AsynchronousMachineUserDefined": "AsynchronousMachineDynamics",
+    "BaseVoltage": "IdentifiedObject",
+    "BasicIntervalSchedule": "IdentifiedObject",
+    "Bay": "EquipmentContainer",
+    "Breaker": "ProtectedSwitch",
+    "BusNameMarker": "IdentifiedObject",
+    "BusbarSection": "Connector",
+    "CGMRegion": "IdentifiedObject",
+    "Command": "Control",
+    "ConductingEquipment": "Equipment",
+    "Conductor": "ConductingEquipment",
+    "ConformLoad": "EnergyConsumer",
+    "ConformLoadGroup": "LoadGroup",
+    "ConformLoadSchedule": "SeasonDayTypeSchedule",
+    "ConnectivityNode": "IdentifiedObject",
+    "ConnectivityNodeContainer": "PowerSystemResource",
+    "Connector": "ConductingEquipment",
+    "Control": "IdentifiedObject",
+    "ControlArea": "PowerSystemResource",
+    "ControlAreaGeneratingUnit": "IdentifiedObject",
+    "CoordinateSystem": "IdentifiedObject",
+    "CsConverter": "ACDCConverter",
+    "CurrentLimit": "OperationalLimit",
+    "Curve": "IdentifiedObject",
+    "DCBaseTerminal": "ACDCTerminal",
+    "DCBreaker": "DCSwitch",
+    "DCBusbar": "DCConductingEquipment",
+    "DCChopper": "DCConductingEquipment",
+    "DCConductingEquipment": "Equipment",
+    "DCConverterUnit": "DCEquipmentContainer",
+    "DCDisconnector": "DCSwitch",
+    "DCEquipmentContainer": "EquipmentContainer",
+    "DCGround": "DCConductingEquipment",
+    "DCLine": "DCEquipmentContainer",
+    "DCLineSegment": "DCConductingEquipment",
+    "DCNode": "IdentifiedObject",
+    "DCSeriesDevice": "DCConductingEquipment",
+    "DCShunt": "DCConductingEquipment",
+    "DCSwitch": "DCConductingEquipment",
+    "DCTerminal": "DCBaseTerminal",
+    "DCTopologicalIsland": "IdentifiedObject",
+    "DCTopologicalNode": "IdentifiedObject",
+    "DayType": "IdentifiedObject",
+    "Diagram": "IdentifiedObject",
+    "DiagramObject": "IdentifiedObject",
+    "DiagramObjectStyle": "IdentifiedObject",
+    "DiagramStyle": "IdentifiedObject",
+    "DiscExcContIEEEDEC1A": "DiscontinuousExcitationControlDynamics",
+    "DiscExcContIEEEDEC2A": "DiscontinuousExcitationControlDynamics",
+    "DiscExcContIEEEDEC3A": "DiscontinuousExcitationControlDynamics",
+    "Disconnector": "Switch",
+    "DiscontinuousExcitationControlDynamics": "DynamicsFunctionBlock",
+    "DiscontinuousExcitationControlUserDefined": "DiscontinuousExcitationControlDynamics",
+    "Discrete": "Measurement",
+    "DiscreteValue": "MeasurementValue",
+    "DynamicsFunctionBlock": "IdentifiedObject",
+    "EarthFaultCompensator": "ConductingEquipment",
+    "EnergyArea": "IdentifiedObject",
+    "EnergyConsumer": "ConductingEquipment",
+    "EnergySchedulingType": "IdentifiedObject",
+    "EnergySource": "ConductingEquipment",
+    "Equipment": "PowerSystemResource",
+    "EquipmentContainer": "ConnectivityNodeContainer",
+    "EquivalentBranch": "EquivalentEquipment",
+    "EquivalentEquipment": "ConductingEquipment",
+    "EquivalentInjection": "EquivalentEquipment",
+    "EquivalentNetwork": "ConnectivityNodeContainer",
+    "EquivalentShunt": "EquivalentEquipment",
+    "ExcAC1A": "ExcitationSystemDynamics",
+    "ExcAC2A": "ExcitationSystemDynamics",
+    "ExcAC3A": "ExcitationSystemDynamics",
+    "ExcAC4A": "ExcitationSystemDynamics",
+    "ExcAC5A": "ExcitationSystemDynamics",
+    "ExcAC6A": "ExcitationSystemDynamics",
+    "ExcAC8B": "ExcitationSystemDynamics",
+    "ExcANS": "ExcitationSystemDynamics",
+    "ExcAVR1": "ExcitationSystemDynamics",
+    "ExcAVR2": "ExcitationSystemDynamics",
+    "ExcAVR3": "ExcitationSystemDynamics",
+    "ExcAVR4": "ExcitationSystemDynamics",
+    "ExcAVR5": "ExcitationSystemDynamics",
+    "ExcAVR7": "ExcitationSystemDynamics",
+    "ExcBBC": "ExcitationSystemDynamics",
+    "ExcCZ": "ExcitationSystemDynamics",
+    "ExcDC1A": "ExcitationSystemDynamics",
+    "ExcDC2A": "ExcitationSystemDynamics",
+    "ExcDC3A": "ExcitationSystemDynamics",
+    "ExcDC3A1": "ExcitationSystemDynamics",
+    "ExcELIN1": "ExcitationSystemDynamics",
+    "ExcELIN2": "ExcitationSystemDynamics",
+    "ExcHU": "ExcitationSystemDynamics",
+    "ExcIEEEAC1A": "ExcitationSystemDynamics",
+    "ExcIEEEAC2A": "ExcitationSystemDynamics",
+    "ExcIEEEAC3A": "ExcitationSystemDynamics",
+    "ExcIEEEAC4A": "ExcitationSystemDynamics",
+    "ExcIEEEAC5A": "ExcitationSystemDynamics",
+    "ExcIEEEAC6A": "ExcitationSystemDynamics",
+    "ExcIEEEAC7B": "ExcitationSystemDynamics",
+    "ExcIEEEAC8B": "ExcitationSystemDynamics",
+    "ExcIEEEDC1A": "ExcitationSystemDynamics",
+    "ExcIEEEDC2A": "ExcitationSystemDynamics",
+    "ExcIEEEDC3A": "ExcitationSystemDynamics",
+    "ExcIEEEDC4B": "ExcitationSystemDynamics",
+    "ExcIEEEST1A": "ExcitationSystemDynamics",
+    "ExcIEEEST2A": "ExcitationSystemDynamics",
+    "ExcIEEEST3A": "ExcitationSystemDynamics",
+    "ExcIEEEST4B": "ExcitationSystemDynamics",
+    "ExcIEEEST5B": "ExcitationSystemDynamics",
+    "ExcIEEEST6B": "ExcitationSystemDynamics",
+    "ExcIEEEST7B": "ExcitationSystemDynamics",
+    "ExcOEX3T": "ExcitationSystemDynamics",
+    "ExcPIC": "ExcitationSystemDynamics",
+    "ExcREXS": "ExcitationSystemDynamics",
+    "ExcSCRX": "ExcitationSystemDynamics",
+    "ExcSEXS": "ExcitationSystemDynamics",
+    "ExcSK": "ExcitationSystemDynamics",
+    "ExcST1A": "ExcitationSystemDynamics",
+    "ExcST2A": "ExcitationSystemDynamics",
+    "ExcST3A": "ExcitationSystemDynamics",
+    "ExcST4B": "ExcitationSystemDynamics",
+    "ExcST6B": "ExcitationSystemDynamics",
+    "ExcST7B": "ExcitationSystemDynamics",
+    "ExcitationSystemDynamics": "DynamicsFunctionBlock",
+    "ExcitationSystemUserDefined": "ExcitationSystemDynamics",
+    "ExternalNetworkInjection": "RegulatingCondEq",
+    "FossilFuel": "IdentifiedObject",
+    "FullModel": "IdentifiedObject",
+    "GenICompensationForGenJ": "IdentifiedObject",
+    "GeneratingUnit": "Equipment",
+    "GeographicalRegion": "IdentifiedObject",
+    "GovCT1": "TurbineGovernorDynamics",
+    "GovCT2": "TurbineGovernorDynamics",
+    "GovGAST": "TurbineGovernorDynamics",
+    "GovGAST1": "TurbineGovernorDynamics",
+    "GovGAST2": "TurbineGovernorDynamics",
+    "GovGAST3": "TurbineGovernorDynamics",
+    "GovGAST4": "TurbineGovernorDynamics",
+    "GovGASTWD": "TurbineGovernorDynamics",
+    "GovHydro1": "TurbineGovernorDynamics",
+    "GovHydro2": "TurbineGovernorDynamics",
+    "GovHydro3": "TurbineGovernorDynamics",
+    "GovHydro4": "TurbineGovernorDynamics",
+    "GovHydroDD": "TurbineGovernorDynamics",
+    "GovHydroFrancis": "TurbineGovernorDynamics",
+    "GovHydroIEEE0": "TurbineGovernorDynamics",
+    "GovHydroIEEE2": "TurbineGovernorDynamics",
+    "GovHydroPID": "TurbineGovernorDynamics",
+    "GovHydroPID2": "TurbineGovernorDynamics",
+    "GovHydroPelton": "TurbineGovernorDynamics",
+    "GovHydroR": "TurbineGovernorDynamics",
+    "GovHydroWEH": "TurbineGovernorDynamics",
+    "GovHydroWPID": "TurbineGovernorDynamics",
+    "GovSteam0": "TurbineGovernorDynamics",
+    "GovSteam1": "TurbineGovernorDynamics",
+    "GovSteam2": "TurbineGovernorDynamics",
+    "GovSteamCC": "TurbineGovernorDynamics",
+    "GovSteamEU": "TurbineGovernorDynamics",
+    "GovSteamFV2": "TurbineGovernorDynamics",
+    "GovSteamFV3": "TurbineGovernorDynamics",
+    "GovSteamFV4": "TurbineGovernorDynamics",
+    "GovSteamIEEE1": "TurbineGovernorDynamics",
+    "GovSteamSGO": "TurbineGovernorDynamics",
+    "GrossToNetActivePowerCurve": "Curve",
+    "Ground": "ConductingEquipment",
+    "GroundDisconnector": "Switch",
+    "GroundingImpedance": "EarthFaultCompensator",
+    "HydroGeneratingUnit": "GeneratingUnit",
+    "HydroPowerPlant": "PowerSystemResource",
+    "HydroPump": "Equipment",
+    "Junction": "Connector",
+    "Limit": "IdentifiedObject",
+    "LimitSet": "IdentifiedObject",
+    "Line": "EquipmentContainer",
+    "LinearShuntCompensator": "ShuntCompensator",
+    "LoadAggregate": "LoadDynamics",
+    "LoadArea": "EnergyArea",
+    "LoadBreakSwitch": "ProtectedSwitch",
+    "LoadComposite": "LoadDynamics",
+    "LoadDynamics": "IdentifiedObject",
+    "LoadGenericNonLinear": "LoadDynamics",
+    "LoadGroup": "IdentifiedObject",
+    "LoadMotor": "IdentifiedObject",
+    "LoadResponseCharacteristic": "IdentifiedObject",
+    "LoadStatic": "IdentifiedObject",
+    "LoadUserDefined": "LoadDynamics",
+    "Location": "IdentifiedObject",
+    "Measurement": "IdentifiedObject",
+    "MeasurementValue": "IdentifiedObject",
+    "MeasurementValueQuality": "Quality61850",
+    "MeasurementValueSource": "IdentifiedObject",
+    "MechLoad1": "MechanicalLoadDynamics",
+    "MechanicalLoadDynamics": "DynamicsFunctionBlock",
+    "MechanicalLoadUserDefined": "MechanicalLoadDynamics",
+    "MergingAgent": "IdentifiedObject",
+    "ModellingAuthority": "IdentifiedObject",
+    "MutualCoupling": "IdentifiedObject",
+    "NonConformLoad": "EnergyConsumer",
+    "NonConformLoadGroup": "LoadGroup",
+    "NonConformLoadSchedule": "SeasonDayTypeSchedule",
+    "NonlinearShuntCompensator": "ShuntCompensator",
+    "NuclearGeneratingUnit": "GeneratingUnit",
+    "OperationalLimit": "IdentifiedObject",
+    "OperationalLimitSet": "IdentifiedObject",
+    "OperationalLimitType": "IdentifiedObject",
+    "OverexcLim2": "OverexcitationLimiterDynamics",
+    "OverexcLimIEEE": "OverexcitationLimiterDynamics",
+    "OverexcLimX1": "OverexcitationLimiterDynamics",
+    "OverexcLimX2": "OverexcitationLimiterDynamics",
+    "OverexcitationLimiterDynamics": "DynamicsFunctionBlock",
+    "OverexcitationLimiterUserDefined": "OverexcitationLimiterDynamics",
+    "PFVArControllerType1Dynamics": "DynamicsFunctionBlock",
+    "PFVArControllerType1UserDefined": "PFVArControllerType1Dynamics",
+    "PFVArControllerType2Dynamics": "DynamicsFunctionBlock",
+    "PFVArControllerType2UserDefined": "PFVArControllerType2Dynamics",
+    "PFVArType1IEEEPFController": "PFVArControllerType1Dynamics",
+    "PFVArType1IEEEVArController": "PFVArControllerType1Dynamics",
+    "PFVArType2Common1": "PFVArControllerType2Dynamics",
+    "PFVArType2IEEEPFController": "PFVArControllerType2Dynamics",
+    "PFVArType2IEEEVArController": "PFVArControllerType2Dynamics",
+    "PetersenCoil": "EarthFaultCompensator",
+    "PhaseTapChanger": "TapChanger",
+    "PhaseTapChangerAsymmetrical": "PhaseTapChangerNonLinear",
+    "PhaseTapChangerLinear": "PhaseTapChanger",
+    "PhaseTapChangerNonLinear": "PhaseTapChanger",
+    "PhaseTapChangerSymmetrical": "PhaseTapChangerNonLinear",
+    "PhaseTapChangerTable": "IdentifiedObject",
+    "PhaseTapChangerTablePoint": "TapChangerTablePoint",
+    "PhaseTapChangerTabular": "PhaseTapChanger",
+    "PowerSystemResource": "IdentifiedObject",
+    "PowerSystemStabilizerDynamics": "DynamicsFunctionBlock",
+    "PowerSystemStabilizerUserDefined": "PowerSystemStabilizerDynamics",
+    "PowerTransformer": "ConductingEquipment",
+    "PowerTransformerEnd": "TransformerEnd",
+    "ProtectedSwitch": "Switch",
+    "Pss1": "PowerSystemStabilizerDynamics",
+    "Pss1A": "PowerSystemStabilizerDynamics",
+    "Pss2B": "PowerSystemStabilizerDynamics",
+    "Pss2ST": "PowerSystemStabilizerDynamics",
+    "Pss5": "PowerSystemStabilizerDynamics",
+    "PssELIN2": "PowerSystemStabilizerDynamics",
+    "PssIEEE1A": "PowerSystemStabilizerDynamics",
+    "PssIEEE2B": "PowerSystemStabilizerDynamics",
+    "PssIEEE3B": "PowerSystemStabilizerDynamics",
+    "PssIEEE4B": "PowerSystemStabilizerDynamics",
+    "PssPTIST1": "PowerSystemStabilizerDynamics",
+    "PssPTIST3": "PowerSystemStabilizerDynamics",
+    "PssSB4": "PowerSystemStabilizerDynamics",
+    "PssSH": "PowerSystemStabilizerDynamics",
+    "PssSK": "PowerSystemStabilizerDynamics",
+    "PssWECC": "PowerSystemStabilizerDynamics",
+    "RaiseLowerCommand": "AnalogControl",
+    "RatioTapChanger": "TapChanger",
+    "RatioTapChangerTable": "IdentifiedObject",
+    "RatioTapChangerTablePoint": "TapChangerTablePoint",
+    "ReactiveCapabilityCurve": "Curve",
+    "RegularIntervalSchedule": "BasicIntervalSchedule",
+    "RegulatingCondEq": "ConductingEquipment",
+    "RegulatingControl": "PowerSystemResource",
+    "RegulationSchedule": "SeasonDayTypeSchedule",
+    "RemoteInputSignal": "IdentifiedObject",
+    "ReportingGroup": "IdentifiedObject",
+    "RotatingMachine": "RegulatingCondEq",
+    "RotatingMachineDynamics": "DynamicsFunctionBlock",
+    "Season": "IdentifiedObject",
+    "SeasonDayTypeSchedule": "RegularIntervalSchedule",
+    "SeriesCompensator": "ConductingEquipment",
+    "SetPoint": "AnalogControl",
+    "ShuntCompensator": "RegulatingCondEq",
+    "SolarGeneratingUnit": "GeneratingUnit",
+    "StaticVarCompensator": "RegulatingCondEq",
+    "StationSupply": "EnergyConsumer",
+    "StringMeasurement": "Measurement",
+    "StringMeasurementValue": "MeasurementValue",
+    "SubGeographicalRegion": "IdentifiedObject",
+    "SubLoadArea": "EnergyArea",
+    "Substation": "EquipmentContainer",
+    "Switch": "ConductingEquipment",
+    "SwitchSchedule": "SeasonDayTypeSchedule",
+    "SynchronousMachine": "RotatingMachine",
+    "SynchronousMachineDetailed": "SynchronousMachineDynamics",
+    "SynchronousMachineDynamics": "RotatingMachineDynamics",
+    "SynchronousMachineEquivalentCircuit": "SynchronousMachineDetailed",
+    "SynchronousMachineSimplified": "SynchronousMachineDynamics",
+    "SynchronousMachineTimeConstantReactance": "SynchronousMachineDetailed",
+    "SynchronousMachineUserDefined": "SynchronousMachineDynamics",
+    "TapChanger": "PowerSystemResource",
+    "TapChangerControl": "RegulatingControl",
+    "TapSchedule": "SeasonDayTypeSchedule",
+    "Terminal": "ACDCTerminal",
+    "TextDiagramObject": "DiagramObject",
+    "ThermalGeneratingUnit": "GeneratingUnit",
+    "TopologicalIsland": "IdentifiedObject",
+    "TopologicalNode": "IdentifiedObject",
+    "TransformerEnd": "IdentifiedObject",
+    "TurbLCFB1": "TurbineLoadControllerDynamics",
+    "TurbineGovernorDynamics": "DynamicsFunctionBlock",
+    "TurbineGovernorUserDefined": "TurbineGovernorDynamics",
+    "TurbineLoadControllerDynamics": "DynamicsFunctionBlock",
+    "TurbineLoadControllerUserDefined": "TurbineLoadControllerDynamics",
+    "UnderexcLim2Simplified": "UnderexcitationLimiterDynamics",
+    "UnderexcLimIEEE1": "UnderexcitationLimiterDynamics",
+    "UnderexcLimIEEE2": "UnderexcitationLimiterDynamics",
+    "UnderexcLimX1": "UnderexcitationLimiterDynamics",
+    "UnderexcLimX2": "UnderexcitationLimiterDynamics",
+    "UnderexcitationLimiterDynamics": "DynamicsFunctionBlock",
+    "UnderexcitationLimiterUserDefined": "UnderexcitationLimiterDynamics",
+    "VAdjIEEE": "VoltageAdjusterDynamics",
+    "VCompIEEEType1": "VoltageCompensatorDynamics",
+    "VCompIEEEType2": "VoltageCompensatorDynamics",
+    "ValueAliasSet": "IdentifiedObject",
+    "ValueToAlias": "IdentifiedObject",
+    "VisibilityLayer": "IdentifiedObject",
+    "VoltageAdjusterDynamics": "DynamicsFunctionBlock",
+    "VoltageAdjusterUserDefined": "VoltageAdjusterDynamics",
+    "VoltageCompensatorDynamics": "DynamicsFunctionBlock",
+    "VoltageCompensatorUserDefined": "VoltageCompensatorDynamics",
+    "VoltageLevel": "EquipmentContainer",
+    "VoltageLimit": "OperationalLimit",
+    "VsCapabilityCurve": "Curve",
+    "VsConverter": "ACDCConverter",
+    "WindAeroConstIEC": "IdentifiedObject",
+    "WindAeroLinearIEC": "IdentifiedObject",
+    "WindContCurrLimIEC": "IdentifiedObject",
+    "WindContPType3IEC": "IdentifiedObject",
+    "WindContPType4aIEC": "IdentifiedObject",
+    "WindContPType4bIEC": "IdentifiedObject",
+    "WindContPitchAngleIEC": "IdentifiedObject",
+    "WindContQIEC": "IdentifiedObject",
+    "WindContRotorRIEC": "IdentifiedObject",
+    "WindDynamicsLookupTable": "IdentifiedObject",
+    "WindGenTurbineType1IEC": "WindTurbineType1or2IEC",
+    "WindGenTurbineType2IEC": "WindTurbineType1or2IEC",
+    "WindGenTurbineType3IEC": "WindTurbineType3or4IEC",
+    "WindGenTurbineType3aIEC": "WindGenTurbineType3IEC",
+    "WindGenTurbineType3bIEC": "WindGenTurbineType3IEC",
+    "WindGenType4IEC": "WindTurbineType3or4IEC",
+    "WindGeneratingUnit": "GeneratingUnit",
+    "WindMechIEC": "IdentifiedObject",
+    "WindPitchContEmulIEC": "IdentifiedObject",
+    "WindPlantDynamics": "DynamicsFunctionBlock",
+    "WindPlantFreqPcontrolIEC": "IdentifiedObject",
+    "WindPlantIEC": "WindPlantDynamics",
+    "WindPlantReactiveControlIEC": "IdentifiedObject",
+    "WindPlantUserDefined": "WindPlantDynamics",
+    "WindProtectionIEC": "IdentifiedObject",
+    "WindTurbineType1or2Dynamics": "DynamicsFunctionBlock",
+    "WindTurbineType1or2IEC": "WindTurbineType1or2Dynamics",
+    "WindTurbineType3or4Dynamics": "DynamicsFunctionBlock",
+    "WindTurbineType3or4IEC": "WindTurbineType3or4Dynamics",
+    "WindTurbineType4aIEC": "WindGenType4IEC",
+    "WindTurbineType4bIEC": "WindGenType4IEC",
+    "WindType1or2UserDefined": "WindTurbineType1or2Dynamics",
+    "WindType3or4UserDefined": "WindTurbineType3or4Dynamics"
+  },
+  "profile_class_count": 369,
+  "profiles": {
+    "ACDCConverter": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ",
+        "SV",
+        "SSH"
+      ]
+    },
+    "ACDCConverterDCTerminal": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ",
+        "SSH",
+        "TP"
+      ]
+    },
+    "ACDCTerminal": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "DY",
+        "EQ",
+        "SV",
+        "SSH",
+        "TP"
+      ]
+    },
+    "ACLineSegment": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ"
+      ]
+    },
+    "Accumulator": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ"
+      ]
+    },
+    "AccumulatorLimit": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ"
+      ]
+    },
+    "AccumulatorLimitSet": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ"
+      ]
+    },
+    "AccumulatorReset": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ"
+      ]
+    },
+    "AccumulatorValue": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ"
+      ]
+    },
+    "ActivePowerLimit": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ"
+      ]
+    },
+    "Analog": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ"
+      ]
+    },
+    "AnalogControl": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ"
+      ]
+    },
+    "AnalogLimit": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ"
+      ]
+    },
+    "AnalogLimitSet": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ"
+      ]
+    },
+    "AnalogValue": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ"
+      ]
+    },
+    "ApparentPowerLimit": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ"
+      ]
+    },
+    "AsynchronousMachine": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "DY",
+        "EQ",
+        "SSH"
+      ]
+    },
+    "AsynchronousMachineDynamics": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "AsynchronousMachineEquivalentCircuit": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "AsynchronousMachineTimeConstantReactance": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "AsynchronousMachineUserDefined": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "BaseVoltage": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ_BD",
+        "EQ",
+        "TP_BD",
+        "TP"
+      ]
+    },
+    "BasicIntervalSchedule": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ"
+      ]
+    },
+    "Bay": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ"
+      ]
+    },
+    "Breaker": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ",
+        "SSH"
+      ]
+    },
+    "BusNameMarker": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ"
+      ]
+    },
+    "BusbarSection": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ"
+      ]
+    },
+    "Command": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ"
+      ]
+    },
+    "ConductingEquipment": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "DY",
+        "EQ_BD",
+        "EQ",
+        "SV",
+        "SSH"
+      ]
+    },
+    "Conductor": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ"
+      ]
+    },
+    "ConformLoad": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ",
+        "SSH"
+      ]
+    },
+    "ConformLoadGroup": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ"
+      ]
+    },
+    "ConformLoadSchedule": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ"
+      ]
+    },
+    "ConnectivityNode": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ_BD",
+        "EQ",
+        "TP_BD",
+        "TP"
+      ]
+    },
+    "ConnectivityNodeContainer": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ_BD",
+        "EQ",
+        "TP_BD",
+        "TP"
+      ]
+    },
+    "Connector": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ_BD",
+        "EQ"
+      ]
+    },
+    "Control": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ"
+      ]
+    },
+    "ControlArea": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ",
+        "SSH"
+      ]
+    },
+    "ControlAreaGeneratingUnit": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ"
+      ]
+    },
+    "CoordinateSystem": {
+      "recommended_class_profile": "GL",
+      "class_profiles": [
+        "GL"
+      ]
+    },
+    "CsConverter": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ",
+        "SV",
+        "SSH"
+      ]
+    },
+    "CurrentLimit": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ"
+      ]
+    },
+    "Curve": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ"
+      ]
+    },
+    "DCBaseTerminal": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ",
+        "SSH",
+        "TP"
+      ]
+    },
+    "DCBreaker": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ"
+      ]
+    },
+    "DCBusbar": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ"
+      ]
+    },
+    "DCChopper": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ"
+      ]
+    },
+    "DCConductingEquipment": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ"
+      ]
+    },
+    "DCConverterUnit": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ"
+      ]
+    },
+    "DCDisconnector": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ"
+      ]
+    },
+    "DCEquipmentContainer": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ",
+        "TP"
+      ]
+    },
+    "DCGround": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ"
+      ]
+    },
+    "DCLine": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ"
+      ]
+    },
+    "DCLineSegment": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ"
+      ]
+    },
+    "DCNode": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ",
+        "TP"
+      ]
+    },
+    "DCSeriesDevice": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ"
+      ]
+    },
+    "DCShunt": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ"
+      ]
+    },
+    "DCSwitch": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ"
+      ]
+    },
+    "DCTerminal": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ",
+        "SSH",
+        "TP"
+      ]
+    },
+    "DCTopologicalIsland": {
+      "recommended_class_profile": "SV",
+      "class_profiles": [
+        "SV"
+      ]
+    },
+    "DCTopologicalNode": {
+      "recommended_class_profile": "TP",
+      "class_profiles": [
+        "SV",
+        "TP"
+      ]
+    },
+    "DayType": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ"
+      ]
+    },
+    "Diagram": {
+      "recommended_class_profile": "DL",
+      "class_profiles": [
+        "DL"
+      ]
+    },
+    "DiagramObject": {
+      "recommended_class_profile": "DL",
+      "class_profiles": [
+        "DL"
+      ]
+    },
+    "DiagramObjectStyle": {
+      "recommended_class_profile": "DL",
+      "class_profiles": [
+        "DL"
+      ]
+    },
+    "DiagramStyle": {
+      "recommended_class_profile": "DL",
+      "class_profiles": [
+        "DL"
+      ]
+    },
+    "DiscExcContIEEEDEC1A": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "DiscExcContIEEEDEC2A": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "DiscExcContIEEEDEC3A": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "Disconnector": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ",
+        "SSH"
+      ]
+    },
+    "DiscontinuousExcitationControlDynamics": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "DiscontinuousExcitationControlUserDefined": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "Discrete": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ"
+      ]
+    },
+    "DiscreteValue": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ"
+      ]
+    },
+    "DynamicsFunctionBlock": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "EarthFaultCompensator": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ"
+      ]
+    },
+    "EnergyArea": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ"
+      ]
+    },
+    "EnergyConsumer": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "DY",
+        "EQ",
+        "SSH"
+      ]
+    },
+    "EnergySchedulingType": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ_BD",
+        "EQ"
+      ]
+    },
+    "EnergySource": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "DY",
+        "EQ_BD",
+        "EQ",
+        "SSH"
+      ]
+    },
+    "Equipment": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "DY",
+        "EQ_BD",
+        "EQ",
+        "SSH"
+      ]
+    },
+    "EquipmentContainer": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ_BD",
+        "EQ"
+      ]
+    },
+    "EquivalentBranch": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ"
+      ]
+    },
+    "EquivalentEquipment": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ",
+        "SSH"
+      ]
+    },
+    "EquivalentInjection": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ",
+        "SSH"
+      ]
+    },
+    "EquivalentNetwork": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ"
+      ]
+    },
+    "EquivalentShunt": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ"
+      ]
+    },
+    "ExcAC1A": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "ExcAC2A": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "ExcAC3A": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "ExcAC4A": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "ExcAC5A": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "ExcAC6A": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "ExcAC8B": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "ExcANS": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "ExcAVR1": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "ExcAVR2": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "ExcAVR3": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "ExcAVR4": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "ExcAVR5": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "ExcAVR7": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "ExcBBC": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "ExcCZ": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "ExcDC1A": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "ExcDC2A": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "ExcDC3A": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "ExcDC3A1": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "ExcELIN1": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "ExcELIN2": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "ExcHU": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "ExcIEEEAC1A": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "ExcIEEEAC2A": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "ExcIEEEAC3A": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "ExcIEEEAC4A": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "ExcIEEEAC5A": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "ExcIEEEAC6A": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "ExcIEEEAC7B": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "ExcIEEEAC8B": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "ExcIEEEDC1A": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "ExcIEEEDC2A": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "ExcIEEEDC3A": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "ExcIEEEDC4B": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "ExcIEEEST1A": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "ExcIEEEST2A": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "ExcIEEEST3A": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "ExcIEEEST4B": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "ExcIEEEST5B": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "ExcIEEEST6B": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "ExcIEEEST7B": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "ExcOEX3T": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "ExcPIC": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "ExcREXS": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "ExcSCRX": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "ExcSEXS": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "ExcSK": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "ExcST1A": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "ExcST2A": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "ExcST3A": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "ExcST4B": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "ExcST6B": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "ExcST7B": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "ExcitationSystemDynamics": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "ExcitationSystemUserDefined": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "ExternalNetworkInjection": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ",
+        "SSH"
+      ]
+    },
+    "FossilFuel": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ"
+      ]
+    },
+    "GenICompensationForGenJ": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "GeneratingUnit": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ",
+        "SSH"
+      ]
+    },
+    "GeographicalRegion": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ_BD",
+        "EQ"
+      ]
+    },
+    "GovCT1": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "GovCT2": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "GovGAST": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "GovGAST1": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "GovGAST2": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "GovGAST3": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "GovGAST4": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "GovGASTWD": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "GovHydro1": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "GovHydro2": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "GovHydro3": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "GovHydro4": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "GovHydroDD": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "GovHydroFrancis": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "GovHydroIEEE0": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "GovHydroIEEE2": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "GovHydroPID": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "GovHydroPID2": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "GovHydroPelton": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "GovHydroR": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "GovHydroWEH": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "GovHydroWPID": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "GovSteam0": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "GovSteam1": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "GovSteam2": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "GovSteamCC": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "GovSteamEU": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "GovSteamFV2": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "GovSteamFV3": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "GovSteamFV4": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "GovSteamIEEE1": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "GovSteamSGO": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "GrossToNetActivePowerCurve": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ"
+      ]
+    },
+    "Ground": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ"
+      ]
+    },
+    "GroundDisconnector": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ",
+        "SSH"
+      ]
+    },
+    "GroundingImpedance": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ"
+      ]
+    },
+    "HydroGeneratingUnit": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ",
+        "SSH"
+      ]
+    },
+    "HydroPowerPlant": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ"
+      ]
+    },
+    "HydroPump": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ"
+      ]
+    },
+    "Junction": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ_BD",
+        "EQ"
+      ]
+    },
+    "Limit": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ"
+      ]
+    },
+    "LimitSet": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ"
+      ]
+    },
+    "Line": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ_BD",
+        "EQ"
+      ]
+    },
+    "LinearShuntCompensator": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ",
+        "SSH"
+      ]
+    },
+    "LoadAggregate": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "LoadArea": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ"
+      ]
+    },
+    "LoadBreakSwitch": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ",
+        "SSH"
+      ]
+    },
+    "LoadComposite": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "LoadDynamics": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "LoadGenericNonLinear": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "LoadGroup": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ"
+      ]
+    },
+    "LoadMotor": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "LoadResponseCharacteristic": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ"
+      ]
+    },
+    "LoadStatic": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "LoadUserDefined": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "Location": {
+      "recommended_class_profile": "GL",
+      "class_profiles": [
+        "GL"
+      ]
+    },
+    "Measurement": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ"
+      ]
+    },
+    "MeasurementValue": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ"
+      ]
+    },
+    "MeasurementValueQuality": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ"
+      ]
+    },
+    "MeasurementValueSource": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ"
+      ]
+    },
+    "MechLoad1": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "MechanicalLoadDynamics": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "MechanicalLoadUserDefined": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "MutualCoupling": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ"
+      ]
+    },
+    "NonConformLoad": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ",
+        "SSH"
+      ]
+    },
+    "NonConformLoadGroup": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ"
+      ]
+    },
+    "NonConformLoadSchedule": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ"
+      ]
+    },
+    "NonlinearShuntCompensator": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ",
+        "SSH"
+      ]
+    },
+    "NuclearGeneratingUnit": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ",
+        "SSH"
+      ]
+    },
+    "OperationalLimit": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ"
+      ]
+    },
+    "OperationalLimitSet": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ"
+      ]
+    },
+    "OperationalLimitType": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ"
+      ]
+    },
+    "OverexcLim2": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "OverexcLimIEEE": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "OverexcLimX1": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "OverexcLimX2": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "OverexcitationLimiterDynamics": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "OverexcitationLimiterUserDefined": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "PFVArControllerType1Dynamics": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "PFVArControllerType1UserDefined": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "PFVArControllerType2Dynamics": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "PFVArControllerType2UserDefined": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "PFVArType1IEEEPFController": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "PFVArType1IEEEVArController": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "PFVArType2Common1": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "PFVArType2IEEEPFController": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "PFVArType2IEEEVArController": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "PetersenCoil": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ"
+      ]
+    },
+    "PhaseTapChanger": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ",
+        "SSH"
+      ]
+    },
+    "PhaseTapChangerAsymmetrical": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ",
+        "SSH"
+      ]
+    },
+    "PhaseTapChangerLinear": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ",
+        "SSH"
+      ]
+    },
+    "PhaseTapChangerNonLinear": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ",
+        "SSH"
+      ]
+    },
+    "PhaseTapChangerSymmetrical": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ",
+        "SSH"
+      ]
+    },
+    "PhaseTapChangerTable": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ"
+      ]
+    },
+    "PhaseTapChangerTablePoint": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ"
+      ]
+    },
+    "PhaseTapChangerTabular": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ",
+        "SSH"
+      ]
+    },
+    "PowerSystemResource": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "DY",
+        "EQ_BD",
+        "EQ",
+        "GL",
+        "SSH"
+      ]
+    },
+    "PowerSystemStabilizerDynamics": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "PowerSystemStabilizerUserDefined": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "PowerTransformer": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ"
+      ]
+    },
+    "PowerTransformerEnd": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ"
+      ]
+    },
+    "ProtectedSwitch": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ",
+        "SSH"
+      ]
+    },
+    "Pss1": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "Pss1A": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "Pss2B": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "Pss2ST": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "Pss5": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "PssELIN2": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "PssIEEE1A": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "PssIEEE2B": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "PssIEEE3B": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "PssIEEE4B": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "PssPTIST1": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "PssPTIST3": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "PssSB4": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "PssSH": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "PssSK": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "PssWECC": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "RaiseLowerCommand": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ"
+      ]
+    },
+    "RatioTapChanger": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ",
+        "SSH"
+      ]
+    },
+    "RatioTapChangerTable": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ"
+      ]
+    },
+    "RatioTapChangerTablePoint": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ"
+      ]
+    },
+    "ReactiveCapabilityCurve": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ"
+      ]
+    },
+    "RegularIntervalSchedule": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ"
+      ]
+    },
+    "RegulatingCondEq": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "DY",
+        "EQ",
+        "SSH"
+      ]
+    },
+    "RegulatingControl": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ",
+        "SSH"
+      ]
+    },
+    "RegulationSchedule": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ"
+      ]
+    },
+    "RemoteInputSignal": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "ReportingGroup": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ",
+        "TP"
+      ]
+    },
+    "RotatingMachine": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "DY",
+        "EQ",
+        "SSH"
+      ]
+    },
+    "RotatingMachineDynamics": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "Season": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ"
+      ]
+    },
+    "SeasonDayTypeSchedule": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ"
+      ]
+    },
+    "SeriesCompensator": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ"
+      ]
+    },
+    "SetPoint": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ"
+      ]
+    },
+    "ShuntCompensator": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ",
+        "SV",
+        "SSH"
+      ]
+    },
+    "SolarGeneratingUnit": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ",
+        "SSH"
+      ]
+    },
+    "StaticVarCompensator": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ",
+        "SSH"
+      ]
+    },
+    "StationSupply": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ",
+        "SSH"
+      ]
+    },
+    "StringMeasurement": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ"
+      ]
+    },
+    "StringMeasurementValue": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ"
+      ]
+    },
+    "SubGeographicalRegion": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ_BD",
+        "EQ"
+      ]
+    },
+    "SubLoadArea": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ"
+      ]
+    },
+    "Substation": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ"
+      ]
+    },
+    "Switch": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ",
+        "SSH"
+      ]
+    },
+    "SwitchSchedule": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ"
+      ]
+    },
+    "SynchronousMachine": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "DY",
+        "EQ",
+        "SSH"
+      ]
+    },
+    "SynchronousMachineDetailed": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "SynchronousMachineDynamics": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "SynchronousMachineEquivalentCircuit": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "SynchronousMachineSimplified": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "SynchronousMachineTimeConstantReactance": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "SynchronousMachineUserDefined": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "TapChanger": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ",
+        "SV",
+        "SSH"
+      ]
+    },
+    "TapChangerControl": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ",
+        "SSH"
+      ]
+    },
+    "TapSchedule": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ"
+      ]
+    },
+    "Terminal": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "DY",
+        "EQ_BD",
+        "EQ",
+        "SV",
+        "SSH",
+        "TP"
+      ]
+    },
+    "TextDiagramObject": {
+      "recommended_class_profile": "DL",
+      "class_profiles": [
+        "DL"
+      ]
+    },
+    "ThermalGeneratingUnit": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ",
+        "SSH"
+      ]
+    },
+    "TopologicalIsland": {
+      "recommended_class_profile": "SV",
+      "class_profiles": [
+        "SV"
+      ]
+    },
+    "TopologicalNode": {
+      "recommended_class_profile": "TP",
+      "class_profiles": [
+        "SV",
+        "TP_BD",
+        "TP"
+      ]
+    },
+    "TransformerEnd": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ"
+      ]
+    },
+    "TurbLCFB1": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "TurbineGovernorDynamics": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "TurbineGovernorUserDefined": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "TurbineLoadControllerDynamics": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "TurbineLoadControllerUserDefined": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "UnderexcLim2Simplified": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "UnderexcLimIEEE1": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "UnderexcLimIEEE2": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "UnderexcLimX1": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "UnderexcLimX2": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "UnderexcitationLimiterDynamics": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "UnderexcitationLimiterUserDefined": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "VAdjIEEE": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "VCompIEEEType1": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "VCompIEEEType2": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "ValueAliasSet": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ"
+      ]
+    },
+    "ValueToAlias": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ"
+      ]
+    },
+    "VisibilityLayer": {
+      "recommended_class_profile": "DL",
+      "class_profiles": [
+        "DL"
+      ]
+    },
+    "VoltageAdjusterDynamics": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "VoltageAdjusterUserDefined": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "VoltageCompensatorDynamics": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "VoltageCompensatorUserDefined": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "VoltageLevel": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ"
+      ]
+    },
+    "VoltageLimit": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ"
+      ]
+    },
+    "VsCapabilityCurve": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ"
+      ]
+    },
+    "VsConverter": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ",
+        "SV",
+        "SSH"
+      ]
+    },
+    "WindAeroConstIEC": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "WindAeroLinearIEC": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "WindContCurrLimIEC": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "WindContPType3IEC": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "WindContPType4aIEC": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "WindContPType4bIEC": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "WindContPitchAngleIEC": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "WindContQIEC": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "WindContRotorRIEC": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "WindDynamicsLookupTable": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "WindGenTurbineType1IEC": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "WindGenTurbineType2IEC": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "WindGenTurbineType3IEC": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "WindGenTurbineType3aIEC": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "WindGenTurbineType3bIEC": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "WindGenType4IEC": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "WindGeneratingUnit": {
+      "recommended_class_profile": "EQ",
+      "class_profiles": [
+        "EQ",
+        "SSH"
+      ]
+    },
+    "WindMechIEC": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "WindPitchContEmulIEC": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "WindPlantDynamics": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "WindPlantFreqPcontrolIEC": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "WindPlantIEC": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "WindPlantReactiveControlIEC": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "WindPlantUserDefined": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "WindProtectionIEC": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "WindTurbineType1or2Dynamics": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "WindTurbineType1or2IEC": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "WindTurbineType3or4Dynamics": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "WindTurbineType3or4IEC": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "WindTurbineType4aIEC": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "WindTurbineType4bIEC": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "WindType1or2UserDefined": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    },
+    "WindType3or4UserDefined": {
+      "recommended_class_profile": "DY",
+      "class_profiles": [
+        "DY"
+      ]
+    }
+  }
+}

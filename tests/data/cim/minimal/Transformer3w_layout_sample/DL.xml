@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:cim="http://iec.ch/TC57/2013/CIM-schema-cim16#"
+         xmlns:md="http://iec.ch/TC57/61970-552/ModelDescription/1#">
+  <md:FullModel rdf:about="urn:uuid:transformer-3w-layout-dl">
+    <md:Model.profile>http://iec.ch/TC57/ns/CIM/DiagramLayout-EU/3.0</md:Model.profile>
+  </md:FullModel>
+  <cim:DiagramObject rdf:ID="diagram-xfmr-3w-layout-001">
+    <cim:DiagramObject.IdentifiedObject rdf:resource="#xfmr-3w-layout-001"/>
+    <cim:DiagramObject.rotation>270</cim:DiagramObject.rotation>
+  </cim:DiagramObject>
+  <cim:DiagramObjectPoint rdf:ID="diagram-xfmr-3w-layout-001-p1">
+    <cim:DiagramObjectPoint.DiagramObject rdf:resource="#diagram-xfmr-3w-layout-001"/>
+    <cim:DiagramObjectPoint.sequenceNumber>1</cim:DiagramObjectPoint.sequenceNumber>
+    <cim:DiagramObjectPoint.xPosition>100</cim:DiagramObjectPoint.xPosition>
+    <cim:DiagramObjectPoint.yPosition>200</cim:DiagramObjectPoint.yPosition>
+  </cim:DiagramObjectPoint>
+  <cim:DiagramObjectPoint rdf:ID="diagram-xfmr-3w-layout-001-p2">
+    <cim:DiagramObjectPoint.DiagramObject rdf:resource="#diagram-xfmr-3w-layout-001"/>
+    <cim:DiagramObjectPoint.sequenceNumber>2</cim:DiagramObjectPoint.sequenceNumber>
+    <cim:DiagramObjectPoint.xPosition>260</cim:DiagramObjectPoint.xPosition>
+    <cim:DiagramObjectPoint.yPosition>200</cim:DiagramObjectPoint.yPosition>
+  </cim:DiagramObjectPoint>
+</rdf:RDF>

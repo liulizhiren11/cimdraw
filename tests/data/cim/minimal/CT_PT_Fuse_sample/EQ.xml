@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:cim="http://iec.ch/TC57/2013/CIM-schema-cim16#"
+         xmlns:md="http://iec.ch/TC57/61970-552/ModelDescription/1#">
+  <md:FullModel rdf:about="urn:uuid:cim-graphics-eq">
+    <md:Model.profile>http://iec.ch/TC57/ns/CIM/Equipment-EU/3.0</md:Model.profile>
+  </md:FullModel>
+  <cim:CurrentTransformer rdf:ID="ct-001">
+    <cim:IdentifiedObject.name>CT1</cim:IdentifiedObject.name>
+  </cim:CurrentTransformer>
+  <cim:PotentialTransformer rdf:ID="pt-001">
+    <cim:IdentifiedObject.name>PT1</cim:IdentifiedObject.name>
+  </cim:PotentialTransformer>
+  <cim:VoltageTransformer rdf:ID="vt-001">
+    <cim:IdentifiedObject.name>VT1</cim:IdentifiedObject.name>
+  </cim:VoltageTransformer>
+  <cim:Fuse rdf:ID="fuse-001">
+    <cim:IdentifiedObject.name>FU1</cim:IdentifiedObject.name>
+  </cim:Fuse>
+  <cim:Terminal rdf:ID="terminal-ct-001">
+    <cim:Terminal.ConductingEquipment rdf:resource="#ct-001"/>
+    <cim:Terminal.TopologicalNode rdf:resource="#node-measure"/>
+  </cim:Terminal>
+  <cim:Terminal rdf:ID="terminal-pt-001">
+    <cim:Terminal.ConductingEquipment rdf:resource="#pt-001"/>
+    <cim:Terminal.TopologicalNode rdf:resource="#node-measure"/>
+  </cim:Terminal>
+  <cim:Terminal rdf:ID="terminal-vt-001">
+    <cim:Terminal.ConductingEquipment rdf:resource="#vt-001"/>
+    <cim:Terminal.TopologicalNode rdf:resource="#node-measure"/>
+  </cim:Terminal>
+  <cim:Terminal rdf:ID="terminal-fuse-001">
+    <cim:Terminal.ConductingEquipment rdf:resource="#fuse-001"/>
+    <cim:Terminal.TopologicalNode rdf:resource="#node-fuse"/>
+  </cim:Terminal>
+</rdf:RDF>

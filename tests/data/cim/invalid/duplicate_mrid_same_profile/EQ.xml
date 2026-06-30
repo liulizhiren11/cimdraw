@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:cim="http://iec.ch/TC57/2013/CIM-schema-cim16#">
+  <cim:Breaker rdf:ID="dup-001">
+    <cim:IdentifiedObject.mRID>dup-001</cim:IdentifiedObject.mRID>
+    <cim:IdentifiedObject.name>QF-Dup-A</cim:IdentifiedObject.name>
+  </cim:Breaker>
+
+  <cim:Breaker rdf:ID="dup-001">
+    <cim:IdentifiedObject.mRID>dup-001</cim:IdentifiedObject.mRID>
+    <cim:IdentifiedObject.name>QF-Dup-B</cim:IdentifiedObject.name>
+  </cim:Breaker>
+</rdf:RDF>

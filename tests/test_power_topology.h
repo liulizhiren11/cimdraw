@@ -1,0 +1,107 @@
+#pragma once
+
+#include <QtTest/QtTest>
+
+class TestPowerTopology : public QObject
+{
+    Q_OBJECT
+
+private slots:
+    void scene_defaults_to_power();
+    void power_items_expose_expected_roles();
+    void power_tools_are_registered();
+    void topology_query_reports_missing_domain();
+    void topology_binding_snapshot_defaults_to_empty_power_payload();
+    void topology_query_controller_reports_missing_scene();
+    void selection_manager_add_replace_remove_items();
+    void scene_get_selection_tracks_first_selected_item();
+    void edit_controller_rotates_selected_items();
+    void scene_item_rotate_routes_through_edit_controller();
+    void deferred_update_controller_tracks_path_recompute_state();
+    void deferred_update_controller_flushes_property_panel_on_demand();
+    void interaction_controller_rejects_unknown_menu_and_drop_inputs();
+    void interaction_controller_handles_text_drop_with_registered_tool();
+    void interaction_controller_dispatches_mouse_events_to_tool();
+    void interaction_controller_handles_drag_enter_move_and_drop();
+    void scene_interaction_workbench_controller_routes_tool_menu_and_drag();
+    void connector_layout_controller_expands_scope_and_nudges_overlapping_lines();
+    void connector_layout_controller_ignores_empty_or_single_line_scope();
+    void state_controller_updates_view_flags_and_wiring_data();
+    void scene_state_workbench_controller_routes_scene_state_updates();
+    void frame_workbench_state_controller_syncs_ui_state();
+    void frame_canvas_appearance_controller_applies_view_background();
+    void frame_canvas_workbench_controller_routes_canvas_state_updates();
+    void frame_canvas_slot_workbench_controller_routes_center_widget_canvas_actions();
+    void frame_canvas_slot_workbench_controller_applies_selected_wiring_standard();
+    void frame_window_state_workbench_controller_syncs_tab_and_action_state();
+    void frame_cim_workbench_controller_uses_default_import_path();
+    void frame_cim_workbench_controller_activates_shape_by_mrid();
+    void cim_scene_builder_instantiates_p0_gap_graphics();
+    void cim_scene_builder_instantiates_p1_reuse_graphics();
+    void cim_scene_builder_instantiates_missing_measurement_and_fuse_graphics();
+    void cim_scene_builder_prefers_diagram_layout_coordinates_when_present();
+    void cim_scene_builder_resolves_terminal_diagram_objects_to_equipment();
+    void cim_scene_builder_prefers_direct_equipment_diagram_objects_over_terminal_geometry();
+    void frame_cim_slot_workbench_controller_routes_import_entrypoints();
+    void frame_scene_lifecycle_coordinator_builds_cim_import_context();
+    void frame_data_source_coordinator_initializes_manager_with_missing_config();
+    void data_source_config_loader_reports_missing_and_valid_root_objects();
+    void data_source_factory_creates_supported_source_and_rejects_invalid_inputs();
+    void data_source_builder_filters_and_builds_sources_from_root();
+    void data_source_runtime_controller_starts_stops_and_clears_sources();
+    void frame_document_workbench_controller_creates_scene_from_factory();
+    void frame_document_workbench_controller_applies_save_callbacks();
+    void frame_document_workbench_controller_guards_missing_open_inputs();
+    void frame_document_slot_workbench_controller_routes_center_widget_document_actions();
+    void frame_document_slot_workbench_controller_syncs_ui_for_missing_view_save_actions();
+    void frame_editor_workbench_controller_resolves_scene_and_guards_missing_view();
+    void frame_editor_workbench_controller_routes_delete_and_shortcut_actions();
+    void frame_editor_slot_workbench_controller_routes_center_widget_actions();
+    void frame_window_state_slot_workbench_controller_routes_center_widget_state_actions();
+    void frame_topology_slot_workbench_controller_routes_center_widget_topology_actions();
+    void frame_tool_selection_slot_workbench_controller_resolves_scene_and_guards_inputs();
+    void scene_edit_workbench_controller_resolves_stack_from_scene();
+    void scene_edit_workbench_controller_routes_shortcut_and_delete();
+    void scene_edit_slot_workbench_controller_routes_scene_actions();
+    void scene_selection_workbench_controller_replaces_and_clears_selection();
+    void scene_selection_workbench_controller_routes_lifecycle_operations();
+    void scene_selection_slot_workbench_controller_routes_scene_selection_actions();
+    void scene_selection_slot_workbench_controller_routes_scene_selection_queries();
+    void scene_state_slot_workbench_controller_routes_scene_state_actions();
+    void scene_state_slot_workbench_controller_routes_scene_state_queries();
+    void scene_topology_slot_workbench_controller_routes_scene_topology_actions();
+    void scene_topology_slot_workbench_controller_routes_scene_topology_index_and_snapshot_dispatch();
+    void scene_slot_workbench_controllers_support_scene_view_and_dom_entrypoints();
+    void scene_topology_workbench_controller_rebuilds_index_and_reads_snapshot();
+    void scene_topology_workbench_controller_guards_empty_queries_and_wiring_data();
+    void frame_topology_workbench_controller_resolves_scene_and_guards_missing_view();
+    void frame_topology_workbench_controller_clears_highlights_for_active_scene();
+    void frame_workbench_ui_controller_syncs_tab_and_selection_state();
+    void frame_workbench_ui_controller_handles_empty_and_multi_selection();
+    void center_widget_emits_scene_and_tab_close_signals();
+    void center_widget_ignores_invalid_close_index();
+    void viewport_controller_computes_contents_rect_and_dispatches_mouse_event();
+    void topology_state_controller_rebuilds_index_for_empty_scene();
+    void topology_state_controller_invalidates_cached_snapshot();
+    void topology_state_controller_exports_default_view_state_without_view();
+    void power_topology_analysis_controller_returns_empty_results_without_scene();
+    void power_topology_analysis_controller_rejects_switch_preview_for_non_switch_device();
+    void power_topology_analysis_controller_returns_empty_device_queries_for_empty_scene();
+    void context_menu_controller_creates_and_trims_menu_actions();
+    void context_menu_controller_resets_existing_menu();
+    void context_menu_controller_ensures_menu_instance();
+    void context_menu_controller_prepares_menu_for_display();
+    void scene_constructs_context_menu_for_exec_path();
+    void scene_exec_context_menu_remains_repeatable();
+    void interaction_controller_accepts_only_text_drop_mime();
+    void scene_document_slot_workbench_controller_routes_scene_document_actions();
+    void scene_document_slot_workbench_controller_routes_document_and_group_dispatch();
+    void scene_document_workbench_controller_routes_document_and_group_entrypoints();
+    void document_controller_rejects_missing_or_invalid_dom_sources();
+    void document_controller_parses_valid_dom_and_manages_scene_type();
+    void document_controller_rejects_save_without_scene_or_path();
+    void scene_to_dom_document_routes_through_document_controller();
+    void group_controller_creates_group_and_reparents_items();
+    void item_lifecycle_controller_handles_insert_delete_and_batch_selection();
+    void item_lifecycle_controller_ignores_null_scene_or_items();
+};

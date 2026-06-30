@@ -1,0 +1,13 @@
+﻿{
+  "wiring": {
+    "symbolStandard": "GB"
+  },
+  "sources": [
+    {
+      "type": "wiring_tcp_json",
+      "enabled": true,
+      "listenAddress": "127.0.0.1",
+      "listenPort": 37737
+    }
+  ]
+}

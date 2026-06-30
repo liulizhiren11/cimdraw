@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:cim="http://iec.ch/TC57/2013/CIM-schema-cim16#"
+         xmlns:md="http://iec.ch/TC57/61970-552/ModelDescription/1#">
+  <md:FullModel rdf:about="urn:uuid:shunt-family-eq">
+    <md:Model.profile>http://iec.ch/TC57/ns/CIM/Equipment-EU/3.0</md:Model.profile>
+  </md:FullModel>
+
+  <cim:ShuntCompensator rdf:ID="cap-bank-001">
+    <cim:IdentifiedObject.name>CapBank1</cim:IdentifiedObject.name>
+    <cim:ShuntCompensator.bPerSection>0.0042</cim:ShuntCompensator.bPerSection>
+  </cim:ShuntCompensator>
+
+  <cim:LinearShuntCompensator rdf:ID="reactor-bank-001">
+    <cim:IdentifiedObject.name>Reactor1</cim:IdentifiedObject.name>
+    <cim:ShuntCompensator.bPerSection>-0.0035</cim:ShuntCompensator.bPerSection>
+  </cim:LinearShuntCompensator>
+
+  <cim:LinearShuntCompensator rdf:ID="split-reactor-001">
+    <cim:IdentifiedObject.name>Split Reactor 1</cim:IdentifiedObject.name>
+    <cim:ShuntCompensator.bPerSection>-0.0030</cim:ShuntCompensator.bPerSection>
+    <cim:ShuntCompensator.maximumSections>2</cim:ShuntCompensator.maximumSections>
+  </cim:LinearShuntCompensator>
+
+  <cim:NonlinearShuntCompensator rdf:ID="nonlinear-reactor-001">
+    <cim:IdentifiedObject.name>Nonlinear Reactor 1</cim:IdentifiedObject.name>
+    <cim:ShuntCompensator.bPerSection>-0.0025</cim:ShuntCompensator.bPerSection>
+  </cim:NonlinearShuntCompensator>
+
+  <cim:StaticVarCompensator rdf:ID="svg-comp-001">
+    <cim:IdentifiedObject.name>SVG1</cim:IdentifiedObject.name>
+  </cim:StaticVarCompensator>
+
+  <cim:PetersenCoil rdf:ID="arc-coil-001">
+    <cim:IdentifiedObject.name>Petersen 1</cim:IdentifiedObject.name>
+  </cim:PetersenCoil>
+
+  <cim:Terminal rdf:ID="terminal-cap-bank-001">
+    <cim:Terminal.ConductingEquipment rdf:resource="#cap-bank-001"/>
+    <cim:Terminal.TopologicalNode rdf:resource="#node-cap-bank-001"/>
+  </cim:Terminal>
+  <cim:Terminal rdf:ID="terminal-reactor-bank-001">
+    <cim:Terminal.ConductingEquipment rdf:resource="#reactor-bank-001"/>
+    <cim:Terminal.TopologicalNode rdf:resource="#node-reactor-bank-001"/>
+  </cim:Terminal>
+  <cim:Terminal rdf:ID="terminal-split-reactor-001">
+    <cim:Terminal.ConductingEquipment rdf:resource="#split-reactor-001"/>
+    <cim:Terminal.TopologicalNode rdf:resource="#node-split-reactor-001"/>
+  </cim:Terminal>
+  <cim:Terminal rdf:ID="terminal-nonlinear-reactor-001">
+    <cim:Terminal.ConductingEquipment rdf:resource="#nonlinear-reactor-001"/>
+    <cim:Terminal.TopologicalNode rdf:resource="#node-nonlinear-reactor-001"/>
+  </cim:Terminal>
+  <cim:Terminal rdf:ID="terminal-svg-comp-001">
+    <cim:Terminal.ConductingEquipment rdf:resource="#svg-comp-001"/>
+    <cim:Terminal.TopologicalNode rdf:resource="#node-svg-comp-001"/>
+  </cim:Terminal>
+  <cim:Terminal rdf:ID="terminal-arc-coil-001">
+    <cim:Terminal.ConductingEquipment rdf:resource="#arc-coil-001"/>
+    <cim:Terminal.TopologicalNode rdf:resource="#node-arc-coil-001"/>
+  </cim:Terminal>
+</rdf:RDF>

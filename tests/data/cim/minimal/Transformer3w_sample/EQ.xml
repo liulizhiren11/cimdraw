@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:cim="http://iec.ch/TC57/2013/CIM-schema-cim16#"
+         xmlns:md="http://iec.ch/TC57/61970-552/ModelDescription/1#">
+  <md:FullModel rdf:about="urn:uuid:transformer-3w-eq">
+    <md:Model.profile>http://iec.ch/TC57/ns/CIM/Equipment-EU/3.0</md:Model.profile>
+  </md:FullModel>
+  <cim:PowerTransformer rdf:ID="xfmr-3w-001">
+    <cim:IdentifiedObject.name>T3W1</cim:IdentifiedObject.name>
+  </cim:PowerTransformer>
+  <cim:PowerTransformerEnd rdf:ID="xfmr-3w-end-a">
+    <cim:PowerTransformerEnd.PowerTransformer rdf:resource="#xfmr-3w-001"/>
+  </cim:PowerTransformerEnd>
+  <cim:PowerTransformerEnd rdf:ID="xfmr-3w-end-b">
+    <cim:PowerTransformerEnd.PowerTransformer rdf:resource="#xfmr-3w-001"/>
+  </cim:PowerTransformerEnd>
+  <cim:PowerTransformerEnd rdf:ID="xfmr-3w-end-c">
+    <cim:PowerTransformerEnd.PowerTransformer rdf:resource="#xfmr-3w-001"/>
+  </cim:PowerTransformerEnd>
+  <cim:Terminal rdf:ID="terminal-xfmr-3w-a">
+    <cim:Terminal.ConductingEquipment rdf:resource="#xfmr-3w-001"/>
+    <cim:Terminal.TopologicalNode rdf:resource="#node-xfmr-3w-a"/>
+  </cim:Terminal>
+  <cim:Terminal rdf:ID="terminal-xfmr-3w-b">
+    <cim:Terminal.ConductingEquipment rdf:resource="#xfmr-3w-001"/>
+    <cim:Terminal.TopologicalNode rdf:resource="#node-xfmr-3w-b"/>
+  </cim:Terminal>
+  <cim:Terminal rdf:ID="terminal-xfmr-3w-c">
+    <cim:Terminal.ConductingEquipment rdf:resource="#xfmr-3w-001"/>
+    <cim:Terminal.TopologicalNode rdf:resource="#node-xfmr-3w-c"/>
+  </cim:Terminal>
+</rdf:RDF>
