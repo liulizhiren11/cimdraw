@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:cim="http://iec.ch/TC57/2013/CIM-schema-cim16#"
+         xmlns:md="http://iec.ch/TC57/61970-552/ModelDescription/1#">
+  <md:FullModel rdf:about="urn:uuid:junction-eq">
+    <md:Model.profile>http://iec.ch/TC57/ns/CIM/Equipment-EU/3.0</md:Model.profile>
+  </md:FullModel>
+  <cim:Junction rdf:ID="junction-001">
+    <cim:IdentifiedObject.name>J1</cim:IdentifiedObject.name>
+  </cim:Junction>
+  <cim:Breaker rdf:ID="breaker-a">
+    <cim:IdentifiedObject.name>QF1</cim:IdentifiedObject.name>
+  </cim:Breaker>
+  <cim:Breaker rdf:ID="breaker-b">
+    <cim:IdentifiedObject.name>QF2</cim:IdentifiedObject.name>
+  </cim:Breaker>
+  <cim:Terminal rdf:ID="terminal-junction-001">
+    <cim:Terminal.ConductingEquipment rdf:resource="#junction-001"/>
+    <cim:Terminal.TopologicalNode rdf:resource="#node-junction"/>
+  </cim:Terminal>
+  <cim:Terminal rdf:ID="terminal-breaker-a-1">
+    <cim:Terminal.ConductingEquipment rdf:resource="#breaker-a"/>
+    <cim:Terminal.TopologicalNode rdf:resource="#node-junction"/>
+  </cim:Terminal>
+  <cim:Terminal rdf:ID="terminal-breaker-a-2">
+    <cim:Terminal.ConductingEquipment rdf:resource="#breaker-a"/>
+    <cim:Terminal.TopologicalNode rdf:resource="#node-a"/>
+  </cim:Terminal>
+  <cim:Terminal rdf:ID="terminal-breaker-b-1">
+    <cim:Terminal.ConductingEquipment rdf:resource="#breaker-b"/>
+    <cim:Terminal.TopologicalNode rdf:resource="#node-junction"/>
+  </cim:Terminal>
+  <cim:Terminal rdf:ID="terminal-breaker-b-2">
+    <cim:Terminal.ConductingEquipment rdf:resource="#breaker-b"/>
+    <cim:Terminal.TopologicalNode rdf:resource="#node-b"/>
+  </cim:Terminal>
+</rdf:RDF>

@@ -1,0 +1,54 @@
+#ifndef CIMDRAWBUSBARSECTIONITEM_H
+#define CIMDRAWBUSBARSECTIONITEM_H
+
+#include "CimdrawWiringItemBase.h"
+#include "CimdrawConnectConfig.h"
+
+class CimdrawPowerBusbarSectionItem : public CimdrawWiringItemBase
+{
+    Q_OBJECT
+public:
+    explicit CimdrawPowerBusbarSectionItem(QGraphicsItem* parent = nullptr);
+    explicit CimdrawPowerBusbarSectionItem(const QRectF& pos, QGraphicsItem* parent = nullptr);
+    static QSizeF defaultSize() { return QSizeF(300, 12); }
+    static void drawSymbol(QPainter* painter, const QRectF& rect, CimdrawWiringRunState runState, bool alarmPulse);
+    QString className() override;
+    QString shapeName() const override;
+    CimdrawDrawTypeId drawTypeForXml() const override;
+    CimdrawWiringItemBase* cloneForDuplicate() const override;
+    QGraphicsItem* duplicate() override;
+    void paint(QPainter* painter, const QStyleOptionGraphicsItem* option, QWidget* widget) override;
+
+    bool wiringUsesAlongEdgeConnectPoints() const override { return true; }
+    bool topologyGraphNodeEnabled() const override { return false; }
+    CimdrawConnectPoint* ensureConnectPointAtScene(const QPointF& scenePos) override;
+    void rebindAlongEdgeConnectPorts() override;
+
+    /** 与 paint 中母线条带一致（item 局部坐标） */
+    QRectF busbarBodyRect() const;
+    bool hitBusbarPickRegion(const QPointF& scenePos) const;
+    /** 将场景坐标吸附到母线上下沿（draw.io）；成功时 anchorScene 为沿边连接点圆心 */
+    bool snapSceneToEdgePort(const QPointF& scenePos, qreal maxDist, QPointF& anchorScene) const;
+    /** 在 maxSnapDist 内吸附到母线沿边并复用/创建端口 */
+    CimdrawConnectPoint* ensureConnectPointNearScene(const QPointF& scenePos, qreal maxSnapDist);
+
+    QPainterPath shape() const override;
+    void stretch(int handle, double sx, double sy, const QPointF& origin) override;
+
+    bool isConnectPointUsed(const CimdrawConnectPoint* port) const;
+    void removeConnectPointIfUnused(CimdrawConnectPoint* port);
+    /** 在已有沿边端口中找距 scenePos 最近者（粘贴时按复制位置匹配，避免吸到母线另一沿） */
+    CimdrawConnectPoint* findConnectPortNearScene(const QPointF& scenePos, qreal maxDistPx = 36.0) const;
+
+private:
+    void copyAlongEdgeConnectPointsFrom(const CimdrawPowerBusbarSectionItem* source);
+    bool projectSceneToConnectAnchor(const QPointF& scenePos, QPointF& norm, CONNECT_DIRECTION& dir) const;
+};
+
+class CimdrawConnectLine;
+
+/** 删除/隐藏连线：从端图元摘掉连线，并删除母线上无其它连线的沿边端口 */
+/** 按路径端点恢复母线沿边端口；preservePathShape 为 true 时不重算折线轨迹 */
+void cimdrawReattachBusbarPortsForConnectLine(CimdrawConnectLine* line, bool preservePathShape = true);
+
+#endif // CIMDRAWBUSBARSECTIONITEM_H

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:cim="http://iec.ch/TC57/2013/CIM-schema-cim16#">
+  <cim:BusbarSection rdf:ID="busbar-001">
+    <cim:IdentifiedObject.mRID>busbar-001</cim:IdentifiedObject.mRID>
+    <cim:IdentifiedObject.name>MainBus</cim:IdentifiedObject.name>
+  </cim:BusbarSection>
+
+  <cim:Breaker rdf:ID="breaker-001">
+    <cim:IdentifiedObject.mRID>breaker-001</cim:IdentifiedObject.mRID>
+    <cim:IdentifiedObject.name>QF1</cim:IdentifiedObject.name>
+    <cim:Equipment.EquipmentContainer rdf:resource="#bay-001"/>
+  </cim:Breaker>
+
+  <cim:Disconnector rdf:ID="disconnector-001">
+    <cim:IdentifiedObject.mRID>disconnector-001</cim:IdentifiedObject.mRID>
+    <cim:IdentifiedObject.name>QS1</cim:IdentifiedObject.name>
+  </cim:Disconnector>
+
+  <cim:PowerTransformer rdf:ID="transformer-001">
+    <cim:IdentifiedObject.mRID>transformer-001</cim:IdentifiedObject.mRID>
+    <cim:IdentifiedObject.name>T1</cim:IdentifiedObject.name>
+  </cim:PowerTransformer>
+
+  <cim:EnergyConsumer rdf:ID="load-001">
+    <cim:IdentifiedObject.mRID>load-001</cim:IdentifiedObject.mRID>
+    <cim:IdentifiedObject.name>Load1</cim:IdentifiedObject.name>
+  </cim:EnergyConsumer>
+
+  <cim:SynchronousMachine rdf:ID="generator-001">
+    <cim:IdentifiedObject.mRID>generator-001</cim:IdentifiedObject.mRID>
+    <cim:IdentifiedObject.name>G1</cim:IdentifiedObject.name>
+  </cim:SynchronousMachine>
+</rdf:RDF>

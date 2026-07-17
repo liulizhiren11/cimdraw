@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:cim="http://iec.ch/TC57/2013/CIM-schema-cim16#">
+  <cim:BusbarSection rdf:ID="busbar-partial-001">
+    <cim:IdentifiedObject.mRID>busbar-partial-001</cim:IdentifiedObject.mRID>
+    <cim:IdentifiedObject.name>PartialBus</cim:IdentifiedObject.name>
+  </cim:BusbarSection>
+
+  <cim:Breaker rdf:ID="breaker-partial-001">
+    <cim:IdentifiedObject.mRID>breaker-partial-001</cim:IdentifiedObject.mRID>
+    <cim:IdentifiedObject.name>QF-Partial</cim:IdentifiedObject.name>
+  </cim:Breaker>
+</rdf:RDF>

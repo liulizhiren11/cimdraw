@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:cim="http://iec.ch/TC57/2013/CIM-schema-cim16#">
+  <cim:Breaker rdf:about="#breaker-001">
+    <cim:Switch.open>false</cim:Switch.open>
+  </cim:Breaker>
+
+  <cim:Disconnector rdf:about="#disconnector-001">
+    <cim:Switch.open>true</cim:Switch.open>
+  </cim:Disconnector>
+
+  <cim:EnergyConsumer rdf:about="#load-001">
+    <cim:EnergyConsumer.pfixed>12.5</cim:EnergyConsumer.pfixed>
+    <cim:EnergyConsumer.qfixed>3.6</cim:EnergyConsumer.qfixed>
+  </cim:EnergyConsumer>
+
+  <cim:SynchronousMachine rdf:about="#generator-001">
+    <cim:RotatingMachine.p>18.0</cim:RotatingMachine.p>
+    <cim:RotatingMachine.q>2.4</cim:RotatingMachine.q>
+  </cim:SynchronousMachine>
+</rdf:RDF>
